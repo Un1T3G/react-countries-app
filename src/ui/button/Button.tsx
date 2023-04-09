@@ -30,9 +30,9 @@ export default ({
   const getBgColor = () => {
     switch (variant) {
       case 'standard':
-        return 'bg-white'
+        return `bg-white dark:bg-dark-blue hover:bg-slate-200 active:bg-slate-300 dark:hover:bg-slate-700 dark:active:bg-slate-900`
       case 'transparent':
-        return 'bg-transparent'
+        return `bg-transparent hover:bg-slate-200 active:bg-slate-300 dark:hover:bg-slate-700 dark:active:bg-slate-900`
       default:
         throw new Error(variant)
     }
@@ -42,7 +42,7 @@ export default ({
     <button
       {...props}
       className={cn(
-        `${getStylesByVariant()} ${getBgColor()} font-light rounded-lg hover:bg-slate-100`,
+        `${getStylesByVariant()} ${getBgColor()} font-light rounded-lg transition-colors text-very-dark-blue dark:text-white`,
         className && className
       )}
     >

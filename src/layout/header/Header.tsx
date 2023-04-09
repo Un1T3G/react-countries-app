@@ -1,19 +1,18 @@
-import Button from 'src/ui/button/Button'
 import { Container } from 'src/ui/container'
-import { BsMoon } from 'react-icons/bs'
+import { ThemeToggleButton } from './components'
+import { Link } from 'react-router-dom'
 
 export default () => {
   return (
-    <header className="bg-white py-4 shadow-md">
+    <header className="white py-4 shadow-md dark:bg-dark-blue">
       <Container>
         <div className="flex justify-between items-center">
-          <span className="text-black font-extrabold text-lg">
-            Where in the world?
-          </span>
-          <Button className="flex items-center">
-            <BsMoon />
-            <span className="ml-1">Dark Mode</span>
-          </Button>
+          <Link to="/">
+            <span className="font-extrabold text-sm md:text-md text-very-dark-blue dark:text-white">
+              Where in the world?
+            </span>
+          </Link>
+          <ThemeToggleButton />
         </div>
       </Container>
     </header>
