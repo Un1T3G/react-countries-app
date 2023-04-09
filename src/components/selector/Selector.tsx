@@ -1,8 +1,5 @@
 import { Button } from 'src/ui/button'
-import {
-  BsFillArrowDownCircleFill,
-  BsFillArrowUpCircleFill,
-} from 'react-icons/bs'
+import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { useOutside } from 'src/hooks/useOutside'
 
@@ -52,7 +49,7 @@ export default <T,>({
         <span className="mr-1">
           {options.find((x) => x.value === value)?.label ?? placeHolderText}
         </span>
-        {isOpened ? <BsFillArrowUpCircleFill /> : <BsFillArrowDownCircleFill />}
+        {isOpened ? <AiOutlineArrowUp /> : <AiOutlineArrowDown />}
       </Button>
       {isOpened && (
         <ul

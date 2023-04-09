@@ -8,10 +8,10 @@ export default () => {
     <section className="py-6 min-h-full flex items-center w-full">
       <Container className="w-full flex-1">
         <div className="flex flex-col items-center w-full">
-          <h1 className="font-extrabold text-[38px] text-very-dark-blue dark:text-white">
+          <h1 className="font-extrabold text-[24px] md:text-[38px] text-very-dark-blue dark:text-white">
             404
           </h1>
-          <p className="mb-2 font-extrabold text-[38px] text-very-dark-blue dark:text-white">
+          <p className="mb-2 font-extrabold text-[24px] md:text-[38px] text-very-dark-blue dark:text-white">
             Not found
           </p>
           <Link to="/">

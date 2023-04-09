@@ -1,4 +1,4 @@
-import { CountriesCard } from 'src/components/countries-card'
+import { CountryCard } from 'src/components/country-card'
 import { ICountry } from 'src/models/ICountry'
 
 interface IProps {
@@ -9,7 +9,7 @@ export default ({ countries }: IProps) => {
   return (
     <>
       {countries.map((country) => (
-        <CountriesCard key={country.name} country={country} />
+        <CountryCard key={country.name} country={country} />
       ))}
     </>
   )

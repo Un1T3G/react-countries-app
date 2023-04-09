@@ -69,19 +69,21 @@ export default ({ country }: IProps) => {
                 ))}
               </ul>
             </div>
-            <ol className="flex-wrap list-none gap-3 inline-flex items-center mb-5">
-              <span className="dark:text-white text-very-dark-blue font-semibold mr-1">
-                Border countries:
-              </span>
-              {country.borders.map((e) => (
-                <li
-                  key={e}
-                  className="bg-white dark:bg-dark-blue p-2 rounded-md shadow-md dark:text-very-light-gray text-dark-blue"
-                >
-                  {getCountryName(e)}
-                </li>
-              ))}
-            </ol>
+            {country.borders.length > 0 && (
+              <ol className="flex-wrap list-none gap-3 inline-flex items-center mb-5">
+                <span className="dark:text-white text-very-dark-blue font-semibold mr-1">
+                  Border countries:
+                </span>
+                {country.borders.map((e) => (
+                  <li
+                    key={e}
+                    className="bg-white dark:bg-dark-blue p-2 rounded-md shadow-md dark:text-very-light-gray text-dark-blue"
+                  >
+                    {getCountryName(e)}
+                  </li>
+                ))}
+              </ol>
+            )}
             <div>
               <a target="_blank" href={country.location}>
                 <Button className="flex items-center w-full md:w-auto shadow-md">
