@@ -1,4 +1,4 @@
-import Button from 'src/ui/button/Button'
+import {Button} from 'src/ui/button'
 import { BiArrowBack } from 'react-icons/bi'
 import { cn } from 'src/utils/css'
 import { useNavigate } from 'react-router-dom'

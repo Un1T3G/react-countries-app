@@ -1,5 +1,5 @@
 import { BackButton } from 'src/components/back-button'
-import Button from 'src/ui/button/Button'
+import { Button } from 'src/ui/button'
 import { Container } from 'src/ui/container'
 import { FiMapPin } from 'react-icons/fi'
 import { ICountry } from 'src/models/ICountry'

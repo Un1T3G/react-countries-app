@@ -1,7 +1,7 @@
-import Button from 'src/ui/button/Button'
+import { Button } from 'src/ui/button'
 import { AiOutlineHome } from 'react-icons/ai'
 import { Container } from 'src/ui/container'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default () => {
   return (

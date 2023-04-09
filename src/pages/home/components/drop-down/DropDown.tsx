@@ -1,4 +1,4 @@
-import Selector from 'src/components/selector/Selector'
+import {Selector} from 'src/components/selector/'
 
 interface IProps {
   value?: string

@@ -1,4 +1,4 @@
-import Button from 'src/ui/button/Button'
+import { Button } from 'src/ui/button'
 import {
   BsFillArrowDownCircleFill,
   BsFillArrowUpCircleFill,
