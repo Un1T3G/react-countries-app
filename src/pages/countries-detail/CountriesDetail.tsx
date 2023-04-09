@@ -4,6 +4,7 @@ import { Container } from 'src/ui/container'
 import { FiMapPin } from 'react-icons/fi'
 import { ICountry } from 'src/models/ICountry'
 import { getCountryName } from 'src/helpers/getCountryName'
+import { Link } from 'react-router-dom'
 
 interface IProps {
   country: ICountry
@@ -11,7 +12,7 @@ interface IProps {
 
 export default ({ country }: IProps) => {
   return (
-    <section className="py-8 w-full">
+    <div className="py-8 w-full">
       <Container>
         <BackButton className="mb-6" />
         <div className="flex flex-col md:flex-row gap-8">
@@ -75,11 +76,13 @@ export default ({ country }: IProps) => {
                   Border countries:
                 </span>
                 {country.borders.map((e) => (
-                  <li
-                    key={e}
-                    className="bg-white dark:bg-dark-blue p-2 rounded-md shadow-md dark:text-very-light-gray text-dark-blue"
-                  >
-                    {getCountryName(e)}
+                  <li key={e}>
+                    <Link
+                      to={`/country/${e.toLowerCase().replace(/ /g, '%20')}`}
+                      className='className="bg-white dark:bg-dark-blue p-2 rounded-md shadow-md dark:text-very-light-gray text-dark-blue"'
+                    >
+                      {getCountryName(e)}
+                    </Link>
                   </li>
                 ))}
               </ol>
@@ -97,6 +100,6 @@ export default ({ country }: IProps) => {
           </div>
         </div>
       </Container>
-    </section>
+    </div>
   )
 }

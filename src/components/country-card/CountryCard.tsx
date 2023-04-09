@@ -21,7 +21,10 @@ export default ({ className, country, ...props }: IProps) => {
       {...props}
       className={cn('shadow-md rounded-md overflow-hidden', className)}
     >
-      <Link to={`/country/${country.name.toLowerCase().replace(/ /g, '%20')}`} onClick={scrollToTop}>
+      <Link
+        to={`/country/${country.name.toLowerCase().replace(/ /g, '%20')}`}
+        onClick={scrollToTop}
+      >
         <img
           className="w-full h-full max-h-44 object-cover"
           src={country.imageUrl}
@@ -29,9 +32,14 @@ export default ({ className, country, ...props }: IProps) => {
         />
       </Link>
       <div className="px-5 pt-6 pb-8 bg-white dark:bg-dark-blue">
-        <h3 className="text-lg font-extrabold text-very-dark-blue dark:text-white mb-2">
-          {country.name}
-        </h3>
+        <Link
+          to={`/country/${country.name.toLowerCase().replace(/ /g, '%20')}`}
+          onClick={scrollToTop}
+        >
+          <h3 className="text-lg font-extrabold text-very-dark-blue dark:text-white mb-2">
+            {country.name}
+          </h3>
+        </Link>
         <ul className="list-none text-sm">
           {[
             {
@@ -47,7 +55,10 @@ export default ({ className, country, ...props }: IProps) => {
               value: capitalFormatted,
             },
           ].map(({ label, value }) => (
-            <li key={label} className="dark:text-very-light-gray text-dark-blue">
+            <li
+              key={label}
+              className="dark:text-very-light-gray text-dark-blue"
+            >
               <span className="dark:text-white text-very-dark-blue font-semibold mr-1">
                 {label}
               </span>

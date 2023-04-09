@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default () => {
   return (
-    <section className="py-6 min-h-full flex items-center w-full">
+    <div className="py-6 min-h-full flex items-center w-full">
       <Container className="w-full flex-1">
         <div className="flex flex-col items-center w-full">
           <h1 className="font-extrabold text-[24px] md:text-[38px] text-very-dark-blue dark:text-white">
@@ -25,6 +25,6 @@ export default () => {
           </Link>
         </div>
       </Container>
-    </section>
+    </div>
   )
 }

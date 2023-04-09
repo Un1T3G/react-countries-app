@@ -26,7 +26,7 @@ export default ({
   onChangeSearchBar,
 }: IProps) => {
   return (
-    <section className="py-8 w-full min-h-full">
+    <div className="py-8 w-full min-h-full">
       <Container className='min-h-full flex flex-col items-stretch'>
         <div className="flex justify-between mb-8 flex-col md:flex-row">
           <SearchBar value={searchBar} onChange={onChangeSearchBar} />
@@ -42,6 +42,6 @@ export default ({
           </div>
         )}
       </Container>
-    </section>
+    </div>
   )
 }
